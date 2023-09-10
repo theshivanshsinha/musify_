@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Musify!</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Phudu:wght@300&display=swap"
+        rel="stylesheet">
+
+    <meta name="google-signin-client_id" content="612587465923-55jsffq9ae80js064t92r6334je1dk8d.apps.googleusercontent.com">
+</head>
+
+<body>
+    <div id="bg">
+        <div class="heading">
+            <h1 id="t1">Welcome to the world of music</h1>
+            <div class="brand" id="brand">
+                <i class="fa-solid fa-record-vinyl fa-flip" id="logo"></i>
+                <h2 id="t2">Musify</h2>
+            </div>
+        </div>
+        <div id="btn">
+            <i class="fa-solid fa-music" id="clickme"></i>
+            <div id="clicktext"></div>
+        </div>
+        <div id="logdiv">
+            <form action="/home" method="POST">
+                <div class="container">
+                  <label for="uname" class="ft"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+                  <br>
+                  <label for="psw" class="ft"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <br>
+                  <input type="submit" value="Login" id="login">
+                    <br>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                  <br>
+                </div>
+              
+                <div class="container">
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <p id="textg">Sign In</p>
+                  <span class="psw ft">Forgot <a href="#">password?</a></span>
+                </div>
+                <div class="container">
+                    <span class="new ft">New User?  <a href="/signup">Sign up here!</a></span>
+                  </div>
+              </form>
+        </div>
+        <div class="bottombar">
+            made with ♡ by <b>Shivansh</b>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/fb965cfe0c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: "#bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+    <script>
+
+        var btn = document.getElementById("btn");
+        var clickme = document.getElementById("clickme");
+        var clicktext = document.getElementById("clicktext");
+        var brand = document.getElementById("brand");
+        var t1=document.getElementById("t1");
+        var logdiv = document.getElementById("logdiv");
+        clickme.addEventListener("mouseenter", () => {
+            clickme.className = "fa-solid fa-music fa-bounce";
+            clicktext.innerText = "click me and get started!";
+        });
+        clickme.addEventListener("mouseleave", () => {
+            clickme.className = "fa-solid fa-music";
+            clicktext.innerText = "";
+        });
+        clickme.addEventListener("click",()=>{
+            brand.style.position="relative";
+            brand.style.top="-170px";
+            brand.style.left="-550px";
+            btn.style.display="none";
+            t1.innerHTML="Log in to your account";
+            logdiv.style.display="block";
+            
+        });
+
+
+    </script>
+    <script src="index.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+
+</html>

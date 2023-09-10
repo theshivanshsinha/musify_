@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify - Home Page</title>
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Phudu:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="brand" id="brand">
+            <i class="fa-solid fa-record-vinyl" id="logo"></i>
+            <h2 id="t2">Musify</h2>
+            <div id="profile">
+                <p id="t4">Profile</p>
+                <div id="content">
+                    <img src="/pp.png" height="100px" width="100px" id="pfile">
+                    <h2 id="username">
+                        <%= username %>
+                    </h2>
+                    
+                    <button type="submit" name="logout" id="logoutbtn"><a href="/home" style="text-decoration: none;">Log Out</a></button>
+                </div>
+                
+            </div>
+            <h1 id="t3">Welcome <%= username %>!</h1>
+        </div>
+        <form method="POST" action="/search" >
+        <input type="search" placeholder="search for songs" id="search-bar" name="search">
+        <button type="submit" id="searchbtn" name="searchbtn"><i class="fa-solid fa-magnifying-glass"
+                style="color: #ffffff; font-size: 40px;"></i></button>
+        </form>
+        <div class="song-area" id="song-area1" data-aos="flip-down">
+            <div class="song" id="song1">
+                <img src="/song_covers/shape_of_you.jpg" width="400px" height="400px">
+                <h1 id="sn1"></h1>
+                <h2 id="a1"></h2>
+                <i id="pl1" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song2">
+                <img src="/song_covers/levitating.jpg" width="400px" height="400px">
+                <h1 id="sn2"></h1>
+                <h2 id="a2"></h2>
+                <i id="pl2" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song3">
+                <img src="/song_covers/heat_waves.jpg" width="400px" height="400px">
+                <h1 id="sn3"></h1>
+                <h2 id="a3"></h2>
+                <i id="pl3" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+        </div>
+        <div class="song-area" id="song-area2" data-aos="flip-down">
+            <div class="song" id="song4">
+                <img src="/song_covers/despacito.jpg" width="400px" height="400px">
+                <h1 id="sn4"></h1>
+                <h2 id="a4"></h2>
+                <i id="pl4" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song5">
+                <img src="/song_covers/calm_down.jpg" width="400px" height="400px">
+                <h1 id="sn5"></h1>
+                <h2 id="a5"></h2>
+                <i id="pl5" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song6">
+                <img src="/song_covers/apna_time_ayega.jpg" width="400px" height="400px">
+                <h1 id="sn6"></h1>
+                <h2 id="a6"></h2>
+                <i id="pl6" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+        </div>
+        <div class="song-area" id="song-area3" data-aos="flip-down">
+            <div class="song" id="song7">
+                <img src="/song_covers/saware.jpg" width="400px" height="400px">
+                <h1 id="sn7"></h1>
+                <h2 id="a7"></h2>
+                <i id="pl7" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song8">
+                <img src="/song_covers/excuses.jpeg" width="400px" height="400px">
+                <h1 id="sn8"></h1>
+                <h2 id="a8"></h2>
+                <i id="pl8" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+            <div class="song" id="song9">
+                <img src="/song_covers/with_you.jpg" width="400px" height="400px">
+                <h1 id="sn9"></h1>
+                <h2 id="a9"></h2>
+                <i id="pl9" class="fa-solid fa-play fa-beat-fade"
+                    style="color: white; font-size: 100px; position: relative; top: -350px; left: 170px;z-index:-5"></i>
+            </div>
+        </div>
+        <div class="bottombar">
+            <div class="song-detail">
+                <div id="song-img"></div>
+                <h1 id="song-name">Heat Waves</h1>
+                <h2 id="song-author">Glass Animals</h2>
+            </div>
+            <h1 style="font-size: 20px; position: fixed; left: 400px;bottom: 80px;">0:00</h1>
+            <input type="range" name="progressBar" id="progress-bar" value="0" min="0" max="100">
+            <i id="back" class="fa-solid fa-backward-step mcontrol" style="color: #ffffff;"></i>
+            <i id="play" class="fa-solid fa-circle-play mcontrol" style="color: #ffffff;"></i>
+            <i id="pause" class="fa-solid fa-circle-pause mcontrol" style="color: #ffffff;"></i>
+            <i id="forward" class="fa-solid fa-forward-step mcontrol" style="color: #ffffff;"></i>
+            <h1 style="font-size: 20px; position: fixed; left: 1255px;bottom: 80px;" id="currTime"></h1>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/fb965cfe0c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+            el: ".bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+    <script>
+        var profile = document.getElementById("profile");
+        var ptext = document.getElementById("t4");
+        profile.addEventListener("mouseover", () => {
+            ptext.style.opacity = "100%";
+        });
+        profile.addEventListener("mouseleave", () => {
+            ptext.style.opacity = "0%";
+        });
+        var content = document.getElementById("content");
+        var arrowbtn = document.getElementById("arrowbtn");
+        profile.addEventListener("click", () => {
+            profile.style.borderRadius = "10px";
+            profile.style.backgroundImage = "none";
+            ptext.style.display = "none";
+            
+            profile.style.height = "250px";
+            profile.style.width = "300px";
+            profile.style.marginRight = "15%";
+            content.style.display = "flex";
+            content.style.flexDirection = "column";
+            content.style.alignItems = "center";
+            content.style.justifyContent = "space-evenly";
+            profile.style.cursor = "default";
+            content.style.rowGap = "20px";
+            content.style.padding = "10px";
+
+        });
+
+
+        document.getElementById("pfile").addEventListener("mouseover",()=>{
+            document.getElementById("pfile").style.transform="scale(1.1)";
+            document.getElementById("pfile").style.cursor="pointer";
+        });
+        document.getElementById("pfile").addEventListener("mouseout",()=>{
+            document.getElementById("pfile").style.transform="scale(1)";
+        });
+        document.getElementById("pfile").addEventListener("click",()=>{
+            document.getElementById("logoutbtn").style.display="none";
+            document.getElementById("username").style.display="none";
+
+        });
+
+        var song = {
+            songId: ["shape_of_you", "levitating", "heat_waves", "despacito", "calm_down", "apna_time_ayega", "saware", "excuses", "with_you"],
+            songName: ["shape of you", "levitating", "heat waves", "despacito", "calm down", "apna time ayega", "saware", "excuses", "with you"],
+            author: ["Ed Shreen", "Dua Lipa", "Glass Animals", "Luis Fonsi", "rema & Salena Gomez", "Divine", "Arijit Singh", "AP Dhillon", "AP Dhillon"]
+        }
+
+
+        var songImg = document.getElementById("song-img");
+        var songName = document.getElementById("song-name");
+        var songAuthor = document.getElementById("song-author");
+
+        for (let index = 1; index < 10; index++) {
+            document.getElementById("song" + index).addEventListener("mouseover", () => {
+                document.getElementById("sn" + index).innerHTML = song.songName[index - 1] + "";
+                document.getElementById("a" + index).innerHTML = song.author[index - 1] + "";
+                document.getElementById("pl" + index).style.zIndex = "7";
+            });
+
+        };
+
+        for (let i = 1; i < 10; i++) {
+            document.getElementById("song" + i).addEventListener("mouseout", () => {
+                document.getElementById("sn" + i).innerHTML = " ";
+                document.getElementById("a" + i).innerHTML = " ";
+                document.getElementById("pl" + i).style.zIndex = "-5";
+            });
+        };
+
+
+
+        let audio = new Audio("/songs/heat_waves.mp3");
+
+        //
+        document.getElementById("play").addEventListener("click", () => {
+            if (audio.paused || audio.currentTime <= 0) {
+                audio.play();
+                document.getElementById("play").style.display = "none";
+                document.getElementById("pause").style.display = "block";
+            }
+        });
+        document.getElementById("pause").addEventListener("click", () => {
+            if (audio.play || audio.currentTime > 0) {
+                audio.pause();
+                document.getElementById("play").style.display = "block";
+                document.getElementById("pause").style.display = "none";
+            }
+        });
+        audio.addEventListener("timeupdate", () => {
+            var progress = parseInt((audio.currentTime / audio.duration) * 100);
+            console.log(progress);
+            document.getElementById("progress-bar").value = progress;
+            document.getElementById("currTime").innerHTML = (audio.currentTime / 60).toFixed(2);
+        });
+        document.getElementById("progress-bar").addEventListener("change", () => {
+            audio.currentTime = document.getElementById("progress-bar").value * audio.duration / 100;
+        });
+
+
+        for (let j = 1; j < 10; j++) {
+            document.getElementById("song" + j).addEventListener("click", () => {
+                switch (j) {
+                    case 1:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/shape_of_you.jpg")';
+                        break;
+                    case 2:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/levitating.jpg")';
+                        break;
+                    case 3:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/heat_waves.jpg")';
+                        break;
+                    case 4:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/despacito.jpg")';
+                        break;
+                    case 5:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/calm_down.jpg")';
+                        break;
+                    case 6:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/apna_time_ayega.jpg")';
+                        break;
+                    case 7:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/saware.jpg")';
+                        break;
+                    case 8:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/excuses.jpeg")';
+                        break;
+                    case 9:
+                        document.getElementById("song-img").style.backgroundImage = 'url("/song_covers/with_you.jpg")';
+                        break;
+                    default:
+                        break;
+                }
+                audio.src = `/songs/${song.songId[j - 1]}.mp3`;
+                audio.currentTime = 0;
+                audio.play();
+                document.getElementById("play").style.display = "none";
+                document.getElementById("pause").style.display = "block";
+                document.getElementById("song-img").style.backgroundSize = "cover";
+                document.getElementById("song-name").innerHTML = song.songName[j - 1];
+                document.getElementById("song-author").innerHTML = song.author[j - 1];
+            });
+        };
+
+        
+        document.getElementById("back").addEventListener("click", (e) => {
+            audio.currentTime=0;
+            audio.pause()
+            document.getElementById("play").style.display = "block";
+            document.getElementById("pause").style.display = "none";
+        });
+
+
+        document.getElementById("forward").addEventListener("click",()=>{
+            audio.currentTime=audio.duration;
+            audio.pause();
+            document.getElementById("play").style.display = "block";
+            document.getElementById("pause").style.display = "none";
+        });
+
+
+
+    </script>
+    <script src="https://kit.fontawesome.com/fb965cfe0c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            mirror: true,
+            duration: 400,
+            delay: 300,
+        });
+    </script>
+</body>
+
+</html>
